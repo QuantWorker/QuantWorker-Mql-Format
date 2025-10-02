@@ -1,0 +1,101 @@
+{
+    "name": "quantworker-mql-format",
+    "displayName": "QuantWorker MQL Format",
+    "description": "%extension.description%",
+    "version": "1.0.0",
+    "publisher": "QuantWorker",
+    "author": {
+        "name": "QuantWorker",
+        "email": "QuantWorker@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/QuantWorker/QuantWorker-Mql-Format"
+    },
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "icon": "images/icon.png",
+    "categories": [
+        "Programming Languages",
+        "Formatters",
+        "Other" 
+    ],
+    "keywords": [
+        "mql",
+        "mql4",
+        "mql5"
+    ],
+    "activationEvents": [
+        "onLanguage:cpp",
+        "onFileSystem:**/*.mq4",
+        "onFileSystem:**/*.mq5",
+        "onFileSystem:**/*.mqh"
+    ],
+    "main": "./extension.js",
+    "files": [
+        "extension.js",
+        "README.md",
+        "README.zh-cn.md",
+        "README.zh-tw.md",
+        "package.nls.json",
+        "package.nls.zh-cn.json",
+        "package.nls.zh-tw.json",
+        "images",
+        ".clang-format"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "quantworker-mql-format.forceApplyReplacements",
+                "title": "%command.forceApplyReplacements.title%"
+            },
+            {
+                "command": "quantworker-mql-format.formatAndReplace",
+                "title": "%command.formatAndReplace.title%"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "when": "resourceLangId == 'cpp' && resourceFilename =~ /\\.(mq4|mq5|mqh)$/",
+                    "command": "quantworker-mql-format.formatAndReplace",
+                    "group": "1_modification"
+                }
+            ]
+        },
+        "keybindings": [
+            {
+                "command": "quantworker-mql-format.formatAndReplace",
+                "key": "shift+alt+f",
+                "mac": "shift+option+f",
+                "when": "editorTextFocus && editorLangId == 'cpp' && resourceFilename =~ /\\.(mq4|mq5|mqh)$/"
+            }
+        ],
+        "configuration": {
+            "title": "QuantWorker MQL Format",
+            "properties": {
+                "quantworker-mql-format.useBundledClangFormat": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "%configuration.useBundledClangFormat.description%"
+                },
+                "quantworker-mql-format.scanLimit": {
+                    "type": "number",
+                    "default": 100,
+                    "description": "%configuration.scanLimit.description%"
+                },
+                "quantworker-mql-format.debug": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "%configuration.debug.description%"
+                },
+                "quantworker-mql-format.forceCppMode": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "%configuration.forceCppMode.description%"
+                }
+            }
+        }
+    }
+}

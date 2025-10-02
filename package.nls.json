@@ -1,0 +1,9 @@
+{
+    "extension.description": "A VS Code extension that provides built-in code formatting, designed to enhance the MQL4/MQL5 development experience. It automatically replaces the C++ style arrow operator (`->`) with a dot operator (`.`) as you type.",
+    "command.formatAndReplace.title": "MQL5 Format",
+    "command.forceApplyReplacements.title": "Force Apply MQL Rules",
+    "configuration.scanLimit.description": "The number of characters to scan backwards from the cursor for real-time replacements during typing.",
+    "configuration.debug.description": "Enables detailed debug logging in the output channel.",
+    "configuration.useBundledClangFormat.description": "When enabled, the 'MQL5 Format' command will use the extension's bundled .clang-format file for formatting. When disabled, it will use your user-defined default formatter.",
+    "configuration.forceCppMode.description": "Automatically set the language mode to 'C++' for MQL4/MQL5 files (.mq4, .mq5, .mqh) to enable C++ IntelliSense and other language features. Disable this if you want to use a different language mode for these files."
+}

@@ -1,0 +1,9 @@
+{
+    "extension.description": "一个 VS Code 扩展，提供内置的代码格式化功能，旨在增强 MQL4/MQL5 的开发体验。它会在您输入时自动将 C++ 风格的箭头运算符 (`->`) 替换为点运算符 (`.`)。",
+    "command.formatAndReplace.title": "MQL5 格式化",
+    "command.forceApplyReplacements.title": "强制应用MQL规则",
+    "configuration.scanLimit.description": "在输入文字时，从游标位置向后扫描以进行即时替换的字元数。",
+    "configuration.debug.description": "在输出频道中启用详细的除错日志。",
+    "configuration.useBundledClangFormat.description": "启用后，‘MQL5 格式化’命令将使用扩展插件内置的 .clang-format 文件进行格式化。禁用后，则会使用您自定义的默认格式化工具。",
+    "configuration.forceCppMode.description": "为 MQL4/MQL5 文件（.mq4, .mq5, .mqh）自动将语言模式设置为 'C++'，以启用 C++ 的智能感知（IntelliSense）和其他语言功能。如果您希望为这些文件使用其他语言模式，请禁用此选项。"
+}
